@@ -14,6 +14,7 @@ console.log(process.env.PORT)
 app.use(express.json())
 app.use(userRouter)
 app.use(taskRouter)
+console.log('Hello')
 
 
 app.listen(port, ()=>{
