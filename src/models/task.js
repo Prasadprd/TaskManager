@@ -11,11 +11,14 @@ const taskSchema = new mongoose.Schema({
         type : Boolean,
         default : false
     },
+    image: {
+        type : Buffer
+    },
     owner :{
         type : mongoose.Schema.Types.ObjectId,
         required : true,
         ref : 'User'
-    }
+    },
 },{
     timestamps : true
 })

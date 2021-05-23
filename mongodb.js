@@ -13,7 +13,7 @@ MongoClient.connect(connectionURL,{useNewUrlParser : true,useUnifiedTopology: tr
     if(error){
         return console.log('Unable to connect to the database')
     }
-
+    console.log('connected to database')
     const db = client.db(databaseName)
     db.collection('task').findOne({_id :new mongodb.ObjectID("601e658dc0b8e421844c9a4b")},(error,result)=>{
         console.log(result)
